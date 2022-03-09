@@ -1,6 +1,6 @@
 #배열의 크기 N
 #숫자가 더해지는 횟수 M
-# K
+#K
 
 N, M, K = map(int, input().split())
 num_list = list(map(int, input().split()))
@@ -15,13 +15,13 @@ while (M > 0):
 
     while(M > 0 and K > 0):
         sum +=  max_num
-        M = M - 1
-        K = K - 1
+        M -= 1
+        K -= 1
     K = K_copy
 
     if M > 0:
         sum+=sec_num
-        M = M -1
+        M -= 1
 
         
 print(sum)
