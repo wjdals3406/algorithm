@@ -35,15 +35,15 @@ if __name__== "__main__":
     #왼쪽에 가보지 않은 칸 존재(모서리가 아니고, 바다가 아니고, 안가봤고) -> 왼쪽 방향으로 회전 후 왼쪽으로 한 칸 전진
     count = 0
     while True:
-        if c>0 and map_list[r][c-1] != 1 and visit[r][c-1] != 0:
+        if r>0 and map_list[r][c-1] != 1 and visit[r][c-1] != 0:
             map_list, r, c, n, m = rotate(map_list, r, c, n, m) #왼쪽으로 회전
             
             c -= 1 #왼쪽으로 전진
-            visit[r][c-1] = 1 # 가본 곳 체크
+            visit[r][c-1] = 0 # 가본 곳 체크
             count+=1
 
 
-        else: #왼쪽 방향에 가보지 않은 칸이 없다면(왼쪽이 바다 or 모서리 or 가봄)  # 4칸이 모두 바다, 모서리면을 어떻게 표시해?
+        else: #왼쪽 방향에 가보지 않은 칸이 없다면(왼쪽이 바다 or 모서리 or 가봄) 모서리 어떻게 처리해?
             if c>0:
                 if map_list[r][c-1] != 1 or visit[r][c-1] != 1:
                     map_list, r, c, n, m = rotate(map_list, r, c, n, m)
@@ -70,5 +70,20 @@ if __name__== "__main__":
 
             r += 1
             count+=1
+
                     
+            # check_map = [map_list[r][c-1], map_list[r][c+1], map_list[r-1][c], map_list[r+1][c]]
+            # check_visit = [visit[r][c-1], visit[r][c+1], visit[r-1][c], visit[r+1][c]]
+
+            # if sum(check_map) == 4 and sum(check_visit) == 4:
+            #     if map_list[r+1][c] == 1: #뒤쪽 방향이 바다
+            #         count+=1
+            #         break
+
+            #     for _ in range(2):
+            #         map_list, r, c, n, m = rotate(map_list, r, c)
+            # else:
+            #     map_list, r, c, n, m = rotate(map_list, r, c)
+            # continue
+
 print(count)
