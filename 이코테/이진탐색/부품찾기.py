@@ -14,7 +14,6 @@ def binary_search(array, target, start, end):
         return binary_search(array, target, start, mid - 1)
     
     
-
 n = int(sys.stdin.readline().strip())
 store = list(map(int,sys.stdin.readline().split()))
 store.sort()
