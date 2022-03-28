@@ -43,5 +43,5 @@ elif total > m: #오른쪽으로 작아질 때까지 인덱스 이동
         
     print(binary_search(length_list, 6, total, length_list[search_index - 1], length_list[search_index])) #array, target, start, end
     
-    
+
     
