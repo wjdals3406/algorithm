@@ -12,8 +12,3 @@ for i in range(3, n+1):
     
 print(max(d))
     
-
-
-
-#0번째 
-#1번쨰 

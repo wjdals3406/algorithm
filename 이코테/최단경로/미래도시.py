@@ -19,8 +19,6 @@ x, k = map(int,sys.stdin.readline().split())
  #A가 1번 위치에서 K번 회사로 출발한 경우 D1k를 구하면 됨   
 for t in range(1, n+1):
     for a in range(1, n+1):
-        if a == x: #방문 순서가 K -> X여야 하므로  / 왜 책에서는 이 if문 코드가 없지?
-            continue
         for b in range(1, n+1):
             graph[a][b] = min(graph[a][b] , graph[a][t] + graph[t][b])
 
