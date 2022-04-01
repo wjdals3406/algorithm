@@ -16,7 +16,7 @@ while x != 1:
             break
 print(count)
 
-# 이코테 풀이 답안 이해 안감
+# 이코테 풀이 답안
 # d = [0] * 3001
 # for i in range(2, x+1):
 #     d[i] = d[i-1] +1
