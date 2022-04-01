@@ -27,12 +27,3 @@ if graph[1][k] + graph[k][x] >= INF:
 else:
     print(graph[1][k] + graph[k][x])
             
-# for a in range(1, n+1):
-#     for b in range(1, n+1):
-#         if graph[a][b] == INF:
-#             print("INFINITY", end = " ")
-            
-#         else:
-#             print(graph[a][b], end = " ")
-            
-#     print()
