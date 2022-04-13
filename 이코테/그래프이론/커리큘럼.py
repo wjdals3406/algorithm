@@ -17,7 +17,6 @@ for i in range(1, v+1):
             
 sum_list = [0] * (v+1)
 def topology_sort():
-    # result = []
     q = deque()
     
     for i in range(1, v + 1):
