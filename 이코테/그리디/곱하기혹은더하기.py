@@ -8,12 +8,3 @@ for i in range(len(n)-1):
     else:
         sum = sum * int(n[i+1])
 print(sum)
-    
-
-    
-    
-
-        
-                
-        
-        

@@ -32,7 +32,6 @@ def topology_sort():
             sum_list[i] = max(sum_list[now], sum_list[now])
             if indegree[i] == 0:
                 q.append(i)
-                
         
 topology_sort()
 for i in sum_list[1:]:
