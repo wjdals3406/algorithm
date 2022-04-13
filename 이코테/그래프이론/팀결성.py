@@ -14,7 +14,7 @@ def union_parent(parent, a, b):
         parent[a] = b
     
 v, e = map(int, input().split()) # v : ³ëµå, e : ¿§Áö
-parent = [0] * (v + 1)
+parent = [[0] for _ in range(v + 1)]
 
 for i in range(1, v+1):
     parent[i] = i
