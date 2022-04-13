@@ -10,10 +10,10 @@ count = 1
 result = 0
 
 for i in fear_list:
-    if i < count:
+    if count < i:
         count += 1
     elif i == count:
-        count = 0
+        count = 1
         result += 1
         
 print(result)
