@@ -12,5 +12,3 @@ for i in perm:
         perm.remove(i)
         
 print(len(perm))
-        
-
