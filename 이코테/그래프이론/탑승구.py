@@ -1,17 +1,25 @@
+# -*- coding: utf-8 -*-
 import sys
-g = int(sys.stdin.readline()) #탑승구
-p = int(sys.stdin.readline()) #비행기
+G = int(sys.stdin.readline()) #???
+P = int(sys.stdin.readline()) #???
 
-airplane = [0 for _ in range(p+1)]
-port = [[] for _ in range(g+1)]
-for i in range(1, p+1):
-    val = int(sys.stdin.readline())
-    airplane[i] = val
-    port[val].append(i)
+g = [0] * (G+1)
+result = 0
+for i in range(1, P+1):
+    num = int(sys.stdin.readline())
+    if g[num] == 0:
+        g[num] = i
+    else:
+        while g[num] != 0:
+            num -= 1
+        if num <= 0:
+            break
+        g[num] = i
+    result += 1
+for j in range(i+1, P+1):
+    int(sys.stdin.readline())
     
-for i in range(1, p+1):
-    for j, jv in enumerate(port[airplane[i]]):    
-        airplane[jv+1] -= 1
-        port[j-1] += port[1:]
-        port[j] = port[1]
-        
+print(result)
+
+    
+    
