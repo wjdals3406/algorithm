@@ -58,7 +58,7 @@ def fish_move(data, dir, sx, sy): #물고기가 움직이는 함수
     return data, dir
 
 def dfs(sx, sy, data_ori, dir_ori, result):
-    data = copy.deepcopy(data_ori)
+    data = copy.deepcopy(data_ori) #deepcopy 안하면 data값이 변경되어 있는게 계속 전달됨
     dir = copy.deepcopy(dir_ori)
     if sx < 0 or sy < 0 or sx >= 4 or sy >= 4 or data[sx][sy] == 0:
        return result
