@@ -4,7 +4,7 @@ n = int(sys.stdin.readline())
 k = int(sys.stdin.readline())
 
 b = [[0,0] for _ in range(n*n+1)]
-[(key, sum+=val) for key,val in b.items()]
+# [(key, sum+=val) for key,val in b.items()]
 
 for i in range(1,n+1):
     for j in range(i, n+1):
@@ -31,8 +31,10 @@ def binary_search(array, start, end):
             start = mid + 1
         elif array[mid][1] > k:
             end = mid - 1
-    return end
+    return None
 
 start, end = 0, n*n
 print(binary_search(b, start, end))
 
+
+        

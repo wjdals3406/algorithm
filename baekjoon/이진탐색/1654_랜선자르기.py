@@ -18,6 +18,5 @@ def binary_search(array, start, end):
             maxval = max(maxval, mid)
     return maxval
 
-#왜 return 값을 end 값으로 하면 되는 거지??
 print(binary_search(data, 1, max(data)))
      

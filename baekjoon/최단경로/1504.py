@@ -4,7 +4,7 @@ import heapq
 INF = int(1e9)
 n,e = map(int, sys.stdin.readline().split())
 graph = [[] for _ in range(n+1)]
-
+print(graph)
 # start, end = 1, n # 1부터 n까지 이동할 때, 주어진 두 간선은 모두 꼭 통과해야함
 
 for _ in range(e):

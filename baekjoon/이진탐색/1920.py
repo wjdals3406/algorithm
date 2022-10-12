@@ -14,3 +14,5 @@ search = list(map(int, sys.stdin.readline().split()))
 
 for i in range(m):
     print(1) if count_by_range(data, search[i], search[i]) > 0 else print(0)
+    
+    

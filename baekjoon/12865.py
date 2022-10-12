@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys
 from itertools import combinations
+
 n,k = map(int, sys.stdin.readline().split())
 data = [tuple(map(int, sys.stdin.readline().split())) for _ in range(n)]
 data.sort(key = lambda x : x[0])

@@ -8,7 +8,8 @@ for _ in range(n):
     func = sys.stdin.readline().rstrip()
     _ = int(sys.stdin.readline())
     data = sys.stdin.readline().rstrip()
-    # data = re.sub(r'[^\w]', "", data)
+    # data = re.sub(r'[^\w]', "", data) #\w는 모든 문자를 의미
+    
     data = data.replace("[", "") #문자열 제거 함수 다시 살펴보기 & 외우기
     data = data.replace("]", "") #그냥 data[1:-2]해도됨
     data= deque(data.split(","))
@@ -37,4 +38,8 @@ for _ in range(n):
             result = ",".join(data)
             result = '[' + result + ']'
             print(result)
+            
+#문자열 제거 함수
+# a.replace('hello','hi')
+# https://joo-dev.tistory.com/14
             
