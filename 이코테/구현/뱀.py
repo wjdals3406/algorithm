@@ -5,7 +5,7 @@ k = int(sys.stdin.readline())
 board = [[0 for _ in range(n+2)] for _ in range(n+2)] 
 
 
-for i in range(k): #»ç°ú À§Ä¡
+for i in range(k):
     a, b = map(int,sys.stdin.readline().split())
     board[a][b] = -1
 
@@ -18,7 +18,7 @@ for i in range(l):
  
 turn_time = [i[0] for i in direction]   
 
-dx = [-1, 0, 1, 0] # ºÏ, µ¿, ³², ¼­
+dx = [-1, 0, 1, 0]
 dy = [0, 1, 0, -1]
 
 def turn_left(direction):
@@ -40,14 +40,14 @@ y = 1
 time = 0
 s = [[x,y]]
 while x < n + 1 and x > 0 and y < n+1 and y > 0 and board[x + dx[dir]][y + dy[dir]] != 1:
-    x = x + dx[dir]  #head ÁÂÇ¥
+    x = x + dx[dir]  #head ï¿½ï¿½Ç¥
     y = y + dy[dir]  
     
-    if board[x][y] == -1: # ÀÌµ¿ÇÑ °÷¿¡ »ç°ú°¡ ÀÖÀ» ¶§
+    if board[x][y] == -1: # ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
         board[x][y] = 1
         s.append([x,y])
     
-    else: # ÀÌµ¿ÇÑ °÷¿¡ »ç°ú ¾øÀ» ¶§
+    else: # ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
         board[x][y] = 1
         s.append([x,y])
         tx, ty = s[0]
