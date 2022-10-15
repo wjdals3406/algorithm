@@ -5,7 +5,7 @@
 import sys
 from collections import deque
 n,m,k = map(int, sys.stdin.readline().split())
-data = list(deque([[] for _ in range(n+1)]) for _ in range(n+1)) #nxn 배열 생성
+data = list([[] for _ in range(n+1)] for _ in range(n+1)) #nxn 배열 생성
 dx = [-1,1,0,1,1,1,0,-1]
 dy = [0,1,1,1,0,-1,-1,-1]
 ball = deque()
@@ -65,5 +65,6 @@ for x in range(1, n + 1):
     for y in range(1, n + 1):
         for i in data[x][y]:
             total += i[2]
+print(data)
 print(total)
 
