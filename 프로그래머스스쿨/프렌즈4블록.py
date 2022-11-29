@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # 파이썬에서는 이렇게 x2[i][j] == x2[i][j + 1] == x2[i + 1][j] == x2[i + 1][j + 1]같이 ==로 연결 가능
 # and로 쭉 연결 안해도 됨
-
 def make_count(m,n,board,dx,dy):
     remove_list = []
     for x in range(m-1):
