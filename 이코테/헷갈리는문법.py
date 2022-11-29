@@ -1,4 +1,4 @@
-result = 0 #read´Â µÇÁö¸¸ write´Â ¾ÈµÈ´Ù
+result = 0 #readï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ writeï¿½ï¿½ ï¿½ÈµÈ´ï¿½
 def func():
     print(result)
     
