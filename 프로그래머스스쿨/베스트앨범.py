@@ -6,29 +6,30 @@ def solution(genres, plays):
     for g,p in zip(genres, plays):
         dic[g].append(p)
 
+    #속한 노래가 많이 재생된 값 기준으로 장르 정렬
     data = sorted(dic.items(), key = lambda x : -sum(x[1]))
     for i in range(len(data)):
         play = sorted(data[i][1])
         cnt = 0
         while play:
+            #장르 별 두개씩만 append
             if cnt == 2:
                 break
 
             num = play.pop()
 
+            #plays 배열에서 num값이 unique 하지 않을 때
             if plays.count(num) > 1:
                 for j in range(len(plays)):
                     if plays[j] == num and genres[j] == data[i][0]:
                         if j in answer:
                             continue
                         answer.append(j)
-
                         break
             else:
                 answer.append(plays.index(num))
 
             cnt += 1
-
     return answer
 
 genres = ["classic", "pop", "classic", "classic", "pop"]
