@@ -1,6 +1,5 @@
 from collections import deque
 def solution(n, computers):
-    answer = 0
     visited = [0 for _ in range(n)] # 네트워크 별로, 1이상의 수를 가지기
     graph = [[] for _ in range(n)]
     
