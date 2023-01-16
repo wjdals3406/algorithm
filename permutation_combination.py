@@ -21,14 +21,5 @@ def combination(arr, n):
     return result
 
 
-def another(array, r):
-    for i in range(len(array)):
-        if r == 1:
-            yield [array[i]]
-        else:
-            for next in another(array[i:], r-1):
-                yield [array[i]] + next
-
-# print(combination([0,1,2,3], 2))
-# print(permutation([0,1,2,3], 2))
-another([0,1,2,3], 4)
+print(combination([0,1,2,3], 2))
+print(permutation([0,1,2,3], 2))
