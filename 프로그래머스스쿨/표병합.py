@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#¹Ì¿Ï¼º
 from collections import defaultdict
 def solution(commands):
     answer = []
