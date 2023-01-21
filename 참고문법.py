@@ -19,3 +19,12 @@ func()
 #list[10000:] 이렇게 큰값: 하면 에러안남 
 a = [1,2,3,4,5]
 print(a[10:]) #결과 : []
+
+#배열 바로 뒷 원소의 값을 비교할 때 zip함수 사용하면 좋음
+def solution(phoneBook):
+    phoneBook.sort()
+
+    for p1, p2 in zip(phoneBook, phoneBook[1:]):
+        if p2.startswith(p1):
+            return False
+    return True
