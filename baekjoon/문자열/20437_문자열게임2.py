@@ -10,6 +10,7 @@ for _ in range(k):
     n = int(sys.stdin.readline())
     wcnt = Counter(word)
     dic = defaultdict(list)
+    
     for key,val in wcnt.items():
         if val >= n:
             for i in range(len(word)):
@@ -24,6 +25,7 @@ for _ in range(k):
             res.append(d[e] - d[s] + 1)
             s += 1
             e += 1
+            
     if len(res) == 0:
         print(-1)
     else:
