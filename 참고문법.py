@@ -28,3 +28,8 @@ def solution(phoneBook):
         if p2.startswith(p1):
             return False
     return True
+
+#πÿø° ø°∑Ø≥≤ / µ¶¿∫ ΩΩ∂Û¿ÃΩÃ¿Ã æ»µ !!
+from collections import deque
+a = deque([1,2,3,4])
+print(a[2:])
