@@ -1,0 +1,15 @@
+SELECT
+    ANIMAL_TYPE,
+    CASE WHEN ISNULL(NAME) THEN 'No name'
+    ELSE NAME
+    END AS NAME,
+    SEX_UPON_INTAKE
+FROM ANIMAL_INS
+
+-- SELECT
+--     ANIMAL_TYPE,
+--     IFNULL(NAME, "No name") as NAME,
+--     SEX_UPON_INTAKE
+-- FROM ANIMAL_INS
+
+-- 배운 점 : NULL값 처리할 때, IFNULL 함수 사용하면 됨!
