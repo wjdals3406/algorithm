@@ -39,7 +39,7 @@ while k > 0:
     #가을 : 나무 번식 / 겨울 : 양분 추가 => 동시에 진행
     for x in range(n):
         for y in range(n):
-            nutrient_tree[x][y][0] += winter_nutrient[x][y]
+            nutrient_tree[x][y][0] += winter_nutrient[x][y] #겨울
             
             if len(nutrient_tree[x][y][1]) > 0:
                 for age in nutrient_tree[x][y][1]:
