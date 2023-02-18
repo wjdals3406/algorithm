@@ -75,7 +75,6 @@ def move(): #1초마다 모든 상어가 동시에 상하좌우로 인접한 칸
                     
                     if smell[nx][ny][0] == 0: #아무 냄새가 없으면 이동
                         smove.append([nx,ny,shark_loc[i][j][0]])
-                        # shark_loc[nx][ny].extend(shark_loc[i][j])
                         shark_loc[i][j] = []
                         shark_cur_dir[snum] = nd
                         flag2 = 0
@@ -90,7 +89,6 @@ def move(): #1초마다 모든 상어가 동시에 상하좌우로 인접한 칸
                 if flag == 0:
                     nx,ny,shark_cur_dir[snum] = my_smell[0], my_smell[1], my_smell[2]
                     smove.append([nx,ny,shark_loc[i][j][0]])
-                    # shark_loc[nx][ny].extend(shark_loc[i][j])
                     shark_loc[i][j] = []
     
     for x,y,snum in smove:
@@ -122,7 +120,7 @@ def decrease_smell():
                 smell[i][j][0] = 0
 
 time = 0
-while time <= 1000: #이부분에서 tie < 1000으로 해줘서 틀렸었다,,
+while time <= 1000: #이부분에서 tie < 1000으로 해줘서 틀렸었다..
     spread_smell()
     move()
     check()
