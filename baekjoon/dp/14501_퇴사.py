@@ -10,7 +10,7 @@ for i in range(n-1,-1,-1):
         continue
     
     next = day[i][0] + i
-    if len(dp[next:]) == 0:
+    if len(dp[next:]) == 0: #next는 마지막날
         dp[i] = day[i][1]
     else:
         dp[i] = max(dp[next:]) + day[i][1]
