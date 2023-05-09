@@ -22,9 +22,7 @@ def solution(info, edges):
             if info[vnode] == 0: #양이면
                 res = max(res, sheep+1)
 
-                info[vnode] = 1
                 dfs(vnode, wolf, sheep+1, copy.deepcopy(next_visit[:vindex] + next_visit[vindex+1:]))
-                info[vnode] = 0
             else: #늑대면
                 dfs(vnode, wolf+1, sheep, copy.deepcopy(next_visit[:vindex] + next_visit[vindex+1:]))
 
@@ -59,4 +57,4 @@ print(solution([0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0], [[0, 1], [0, 2], [1, 3], [1, 4
 # 	visited[0] = 1
 #     dfs(1, 0)
 
-#     return max(answer)
+    return max(answer)
