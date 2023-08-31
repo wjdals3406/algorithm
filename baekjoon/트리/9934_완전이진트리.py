@@ -1,6 +1,5 @@
 # 깊이가 K인 완전 이진 트리
 # 중위순회
-# 완전 이진 트리이기 때문에 트리가 다 채워져 있음
 import sys
 from collections import defaultdict
 k = int(sys.stdin.readline())  # depth
